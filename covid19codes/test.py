@@ -15,6 +15,8 @@ from pyFTS.common import Membership
 os.chdir('F:\\Minhaz\\MS@NSU\\Fuzzy\\Project_Drive_GIT\\Fuzzy_Systems\\covid19codes')
 
 dataset = pd.read_csv('time_series_covid19_confirmed_hubei.csv', sep=',')
+dataset = pd.read_csv('time_series_covid19_confirmed_global.csv', sep=',')
+
 y = dataset.to_numpy()[0]
 
 rows = []
