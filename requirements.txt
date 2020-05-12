@@ -5,3 +5,4 @@ pyFTS
 scikit-fuzzy
 scipy
 statsmodels
+dill
