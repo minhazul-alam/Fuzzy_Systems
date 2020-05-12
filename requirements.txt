@@ -1,0 +1,8 @@
+matplotlib
+numpy
+pandas
+pyFTS
+scikit-fuzzy
+scipy
+statsmodels
+dill
