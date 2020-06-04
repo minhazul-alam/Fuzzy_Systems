@@ -19,7 +19,8 @@ os.chdir('F:\\Minhaz\\MS@NSU\\Fuzzy\\Project_Drive_GIT\\Fuzzy_Systems\\covid19co
 #Apple Mobility - 13th January - 26th April
 am_dataset = pd.read_csv('Mobility/mobility_apple.csv', sep=',')
 #countries = list(set(dataset['region']))
-braz_data = am_dataset[am_dataset['region']=='Brazil']
+#braz_data = am_dataset[am_dataset['region']=='Brazil']
+braz_data = am_dataset[am_dataset['region']=='Italy']
 braz_driving = np.array((braz_data[braz_data['transportation_type']=='driving'])['value'])
 braz_walking = np.array((braz_data[braz_data['transportation_type']=='walking'])['value'])
 #normalizing
@@ -32,7 +33,7 @@ braz_mobility = (braz_driving + braz_walking)/2.0 #same weight
 
 #Covid Infection data - 22nd January - 9th May
 cv_dataset = pd.read_csv('time_series_covid19_confirmed_global.csv', sep=',')
-cv_Brazil = cv_dataset[cv_dataset['Country/Region']=='Brazil'].to_numpy()[0][4:]
+cv_Brazil = cv_dataset[cv_dataset['Country/Region']=='Italy'].to_numpy()[0][4:]
 cv_Brazil_change = cv_Brazil[1:] - cv_Brazil[:-1]
 #normalizing
 cv_Brazil /= max(cv_Brazil)
